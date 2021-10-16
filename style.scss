@@ -1,0 +1,207 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1d2635;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+body.dark-mode {
+	.card {
+		background-color: #243042;
+	}
+}
+.navbar {
+	.nav-link {
+		color: white;
+		padding-right: .5rem;
+		padding-left: .5rem;
+	}
+	.navbar-cart {
+		.modal-content {
+			background-color: #1d2635;
+		}
+	}
+	.btn-close {
+		filter: invert(1);
+	}
+}
+
+.custom-width-col-2 {
+	width: 22%;
+}
+.custom-width-col-10 {
+	width: 78%;
+}
+
+/* FORM FILTER */
+.filter-produk {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	.top {
+		background-color: #243042;
+		box-sizing: border-box;
+
+		height: auto;
+		width: 100%;
+		padding: 12px 17px;
+		p {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
+	.sub-title {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 7px;
+		margin-top: 10px;
+		padding: 0px 17px;
+	}
+	.sub-title-small {
+		font-size: 80%;
+		font-weight: 400;
+		padding: 0px 17px;
+		display: block;
+	}
+	.form-check {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0px 17px 0px 0px;
+
+		.form-check-label {
+			cursor: pointer;
+			display: block;
+			order: 1;
+			padding: 5px 17px;
+		}
+		.form-check-input {
+			cursor: pointer;
+			display: block;
+			order: 2;
+		}
+	}
+
+	.filter-harga {
+		padding: 0px 17px;
+		.form-control {
+			margin: 10px 0px;
+			background-color: #243042;
+			border-color: #243042;
+			color: white;
+		}
+	}
+}
+
+.card_produk {
+	a {
+		text-decoration: none;
+		&:hover {
+			h5 {
+				text-decoration: underline;
+			}
+		}
+		color: white;
+		.card {
+			.card-body {
+				margin-top: 10px;
+				padding: 0 10px;
+				.card-title {
+					font-size: 15px;
+					line-height: 22px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+				}
+				.price-produk {
+					font-size: 15px;
+					font-weight: 600;
+					color: orange;
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+
+	.row {
+		.col-lg-3 {
+			width: 20%;
+		}
+	}
+}
+
+// humberger
+
+.btn-show-filter {
+	display: none;
+}
+.btn-show-filter-fixed {
+	position: fixed;
+	z-index: 2;
+}
+.ui_show_filter_fixed.close_show_produk {
+	left: -100% !important;
+}
+.ui_show_filter_fixed {
+	position: fixed !important;
+	z-index: 2 !important;
+	opacity: 1 !important;
+
+	width: 80%;
+	left: 50% !important;
+	background-color: #243042;
+	transform: translateX(-50%);
+	.btn-close {
+		filter: invert(1);
+	}
+}
+@media (max-width: 1024px) {
+	.card_produk {
+		.row {
+			.col-lg-3 {
+				width: 33%;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.btn-show-filter {
+		display: block;
+	}
+	.humberger {
+		display: flex;
+	}
+	.filter-produk {
+		width: 0px;
+		position: fixed;
+		left: -100%;
+
+		z-index: -1;
+		transition: all 0.55s ease;
+	}
+	.filter-produk.show-filter {
+		margin-top: 20px;
+		width: 90%;
+		transition: all 0.55s ease;
+		display: inline-block !important;
+	}
+}
+@media (max-width: 552px) {
+	.card_produk {
+		.row {
+			.col-lg-3 {
+				width: 50%;
+			}
+		}
+	}
+}
