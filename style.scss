@@ -1,3 +1,4 @@
+@import "./produk-detail";
 * {
 	margin: 0;
 	padding: 0;
@@ -275,6 +276,50 @@ body.dark-mode {
 		.row {
 			.col-lg-3 {
 				width: 50%;
+			}
+		}
+	}
+}
+
+.copyright {
+	text-align: center;
+	padding: 30px;
+	background-color: #243042;
+	.title_copyright {
+		h6 {
+			color: rgb(111, 111, 111);
+			font-size: 16px;
+			font-weight: 400;
+		}
+		a {
+			text-decoration: none;
+			color: #0275d8;
+		}
+	}
+	span {
+		font-size: 15px;
+		strong {
+			color: #0275d8 !important;
+		}
+	}
+	.title_socialmedia {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			text-decoration: none;
+			color: white;
+			padding: 10px;
+			line-height: 1;
+			background-color: #0275d8;
+			margin-right: 10px;
+			&:hover {
+				background-color: #0275d8;
+			}
+
+			i {
+				font-size: 17px;
 			}
 		}
 	}

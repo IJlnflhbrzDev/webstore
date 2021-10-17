@@ -34,6 +34,18 @@ function closeFilterProduk() {
      document.querySelector(".btn-show-filter").classList.remove("d-none")
 }
 
+// const navLinks = document.querySelectorAll('.nav-item');
+// const navButtonMenuHumberger = document.querySelector(".navbar-toggler ");
+// const menuToggle = document.getElementById('navbarSupportedContent')
+// const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false })
+// navLinks.forEach((l) => {
+//      l.addEventListener('click', () => {
+//           bsCollapse.toggle();
+//           navButtonMenuHumberger.classList.remove("opened")
+//      })
+// })
+
+
 window.addEventListener('scroll', function () {
      let btn_show_filter = document.querySelector('.btn-show-filter');
      let window_position = window.scrollY > 0;

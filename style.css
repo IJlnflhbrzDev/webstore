@@ -1,3 +1,63 @@
+.produk-image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.produk-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+}
+
+.produk-image img:hover {
+  cursor: pointer;
+}
+
+.produk-image .thumbnail {
+  width: 80%;
+}
+
+.produk-image .thumb {
+  width: 20%;
+}
+
+.produk-image .thumb img {
+  float: left;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 109px;
+}
+
+.content-produk-detail h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.content-produk-detail p.price {
+  font-weight: 500;
+  font-size: 21px;
+  white-space: pre-wrap;
+}
+
+.content-produk-detail .form-select {
+  width: 50%;
+  background-color: #243042;
+  color: white;
+  border-color: #243042;
+}
+
+.content-produk-detail table th,
+.content-produk-detail table td {
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -310,5 +370,59 @@ body.dark-mode .card {
   .card_produk .row .col-lg-3 {
     width: 50%;
   }
+}
+
+.copyright {
+  text-align: center;
+  padding: 30px;
+  background-color: #243042;
+}
+
+.copyright .title_copyright h6 {
+  color: #6f6f6f;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.copyright .title_copyright a {
+  text-decoration: none;
+  color: #0275d8;
+}
+
+.copyright span {
+  font-size: 15px;
+}
+
+.copyright span strong {
+  color: #0275d8 !important;
+}
+
+.copyright .title_socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.copyright .title_socialmedia a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  line-height: 1;
+  background-color: #0275d8;
+  margin-right: 10px;
+}
+
+.copyright .title_socialmedia a:hover {
+  background-color: #0275d8;
+}
+
+.copyright .title_socialmedia a i {
+  font-size: 17px;
 }
 /*# sourceMappingURL=style.css.map */
