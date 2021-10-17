@@ -166,6 +166,7 @@ body.dark-mode .card {
 
 .ui_show_filter_fixed.close_show_produk {
   left: -100% !important;
+  width: 0% !important;
 }
 
 .ui_show_filter_fixed {
@@ -208,7 +209,6 @@ body.dark-mode .card {
     transition: all 0.55s ease;
   }
   .filter-produk.show-filter {
-    margin-top: 20px;
     width: 90%;
     -webkit-transition: all 0.55s ease;
     transition: all 0.55s ease;
