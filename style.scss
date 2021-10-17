@@ -16,6 +16,57 @@ body.dark-mode {
 	}
 }
 .navbar {
+	.menu {
+		background-color: transparent;
+		border: none !important;
+		cursor: pointer;
+		display: flex;
+		padding: 0;
+		outline: none !important;
+
+		svg {
+			height: 40px;
+			width: 100%;
+		}
+	}
+	.navbar-toggler:focus {
+		box-shadow: none;
+	}
+
+	.line {
+		fill: none;
+		stroke: white;
+		stroke-width: 6;
+		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.line1 {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+	.line2 {
+		stroke-dasharray: 60 60;
+		stroke-width: 6;
+	}
+	.line3 {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+	.opened .line1 {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+	.opened .line2 {
+		stroke-dasharray: 1 60;
+		stroke-dashoffset: -30;
+		stroke-width: 6;
+	}
+	.opened .line3 {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+
 	.nav-link {
 		color: white;
 		padding-right: .5rem;
@@ -30,7 +81,15 @@ body.dark-mode {
 		filter: invert(1);
 	}
 }
-
+.modal-backdrop {
+	z-index: 1;
+}
+.modal-dialog {
+	position: absolute;
+	width: 500px;
+	right: 0;
+	top: 4%;
+}
 .custom-width-col-2 {
 	width: 22%;
 }
@@ -178,6 +237,12 @@ body.dark-mode {
 	}
 }
 @media (max-width: 768px) {
+	.modal-dialog {
+		position: relative;
+		width: auto;
+		top: auto;
+		right: auto;
+	}
 	.btn_close_produk {
 		display: block;
 	}
@@ -196,6 +261,7 @@ body.dark-mode {
 		transition: all 0.55s ease;
 	}
 	.filter-produk.show-filter {
+		padding-bottom: 30px;
 		width: 90%;
 		transition: all 0.55s ease;
 		display: inline-block !important;
