@@ -141,7 +141,9 @@ body.dark-mode {
 }
 
 // humberger
-
+.btn_close_produk {
+	display: none;
+}
 .btn-show-filter {
 	display: none;
 }
@@ -176,6 +178,9 @@ body.dark-mode {
 	}
 }
 @media (max-width: 768px) {
+	.btn_close_produk {
+		display: block;
+	}
 	.btn-show-filter {
 		display: block;
 	}
