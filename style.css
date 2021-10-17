@@ -304,6 +304,9 @@ body.dark-mode .card {
 }
 
 @media (max-width: 552px) {
+  .navbar-brand {
+    margin-right: 0px !important;
+  }
   .card_produk .row .col-lg-3 {
     width: 50%;
   }
