@@ -51,3 +51,20 @@ window.addEventListener('scroll', function () {
      let window_position = window.scrollY > 0;
      btn_show_filter.classList.toggle('btn-show-filter-fixed', window_position);
 });
+
+// EVENT CLICK CHANGE SRC IMAGE LARGE
+const container_produk_image = document.querySelector(".produk-image");
+const imgLarge = document.querySelector(".thumbnail");
+
+container_produk_image.addEventListener("click", function (e) {
+     // membuat kondisi ketika event click container img ini meng klik sebuah salah satu gambar small
+     if (e.target.className === "thumb-small") {
+          imgLarge.src = e.target.src;
+          imgLarge.classList.add("fade");
+
+          setTimeout(() => {
+               imgLarge.classList.remove("fade")
+          }, 500);
+     }
+
+});

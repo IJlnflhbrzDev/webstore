@@ -34,6 +34,16 @@
   height: 109px;
 }
 
+.produk-image .thumb img:hover {
+  opacity: .5;
+}
+
+.produk-image .fade {
+  opacity: 0;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+
 .content-produk-detail h3 {
   text-transform: uppercase;
   font-size: 20px;
