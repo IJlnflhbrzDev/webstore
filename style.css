@@ -77,6 +77,35 @@
   color: white;
 }
 
+.content-produk-detail .input-jumlah {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-produk-detail .input-jumlah button#btn-plus {
+  border-radius: 0px .25rem .25rem 0px;
+}
+
+.content-produk-detail .input-jumlah button#btn-minus {
+  border-radius: .25rem 0px 0px .25rem;
+}
+
+.content-produk-detail .input-jumlah span#value_count {
+  width: 15%;
+  background: white;
+  height: 38px;
+  text-align: center;
+  color: black;
+  line-height: 38px;
+}
+
 .cart .total {
   background-color: #243042;
   -ms-flex-item-align: start;

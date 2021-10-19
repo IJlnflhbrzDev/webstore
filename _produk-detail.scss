@@ -68,6 +68,25 @@
 			color: white;
 		}
 	}
+	.input-jumlah {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		button#btn-plus {
+			border-radius: 0px .25rem .25rem 0px;
+		}
+		button#btn-minus {
+			border-radius: .25rem 0px 0px .25rem;
+		}
+		span#value_count {
+			width: 15%;
+			background: white;
+			height: 38px;
+			text-align: center;
+			color: black;
+			line-height: 38px;
+		}
+	}
 }
 
 .cart {

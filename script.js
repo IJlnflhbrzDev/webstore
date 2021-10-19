@@ -74,21 +74,47 @@ container_produk_image.addEventListener("click", function (e) {
 
 
 // event count bertambah
-const btn_minus = document.querySelector("#btn-minus");
-const btn_plus = document.querySelector("#btn-plus");
-let countInput = document.querySelector("#value-count");
 
-btn_minus.addEventListener("click", function () {
-     return countInput;
+let minusBtn = document.querySelector("#btn-minus"),
+     plusBtn = document.querySelector("#btn-plus"),
+     valueNumber = document.getElementById("value_count"),
+     number = 1, /// number value
+     min = 1, /// min number
+     max = 10; /// max number
 
-})
-btn_plus.addEventListener("click", function () {
-     countInput.innerHTML = count_input++;
-})
-
-// let i = "hello world";
-// let a = 10;
-// for (let index = 0; index < a.length; index++) {
+let hargaProduk = document.querySelector("#harga-produk"),
+     totalHargaProduk = document.getElementById("total-harga-produk"),
+     defaultHargaProduk = 149000,
+     hargaJual = 149000;
 
 
-// }
+
+minusBtn.addEventListener("click", function () {
+     if (number > min) {
+          number = number - 1;
+          valueNumber.innerText = number;
+          valueNumber.style.color = "black";
+          // mengitung harga
+          defaultHargaProduk = defaultHargaProduk - hargaJual;
+          totalHargaProduk.innerText = "Rp." + defaultHargaProduk;
+     } else {
+          valueNumber.style.color = "red ";
+     }
+});
+
+plusBtn.addEventListener("click", function () {
+     if (number < max) {
+          number = number + 1;
+          valueNumber.innerText = number;
+          valueNumber.style.color = "black";
+          defaultHargaProduk = defaultHargaProduk + hargaJual;
+          totalHargaProduk.innerText = "Rp." + defaultHargaProduk;
+
+     } else {
+          valueNumber.style.color = "red ";
+          alert("Ups Stock Terbatas");
+
+
+     }
+});
+// end script event count button

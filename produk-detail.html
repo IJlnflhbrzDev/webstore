@@ -157,7 +157,7 @@
                                         <thead>
                                              <tr>
                                                   <th scope="col">Harga</th>
-                                                  <td scope="col">Rp 149.000</td>
+                                                  <td scope="col" id="harga-produk">Rp 149.000</td>
                                              </tr>
                                         </thead>
                                         <tbody>
@@ -171,22 +171,20 @@
                                              </tr>
                                              <tr>
                                                   <th scope="row">Stok</th>
-                                                  <td>120</td>
+                                                  <td>10</td>
                                              </tr>
                                              <tr>
                                                   <th scope="row">Jumlah</th>
                                                   <td>
-                                                       <div class="input-group  w-25 text-center">
-                                                            <button class="btn btn-primary input-group-text"
-                                                                 type="button" id="btn-minus">
+                                                       <div class="input-jumlah">
+                                                            <button class="btn btn-primary " type="button"
+                                                                 id="btn-minus">
                                                                  -
                                                             </button>
-                                                            <input type="number" class="text-center form-control"
-                                                                 disabled value="1" aria-describedby="basic-addon1"
-                                                                 id="value-count">
+                                                            <span id="value_count">1</span>
                                                             <!-- <span id="value-count">1</span> -->
-                                                            <button class="btn btn-primary input-group-text"
-                                                                 type="button" id="btn-plus">
+                                                            <button class="btn btn-primary " type="button"
+                                                                 id="btn-plus">
                                                                  +
                                                             </button>
                                                        </div>
@@ -194,7 +192,7 @@
                                              </tr>
                                              <tr>
                                                   <th scope="row">Total</th>
-                                                  <td>Rp 149.000</td>
+                                                  <td id="total-harga-produk">Rp 149.000</td>
                                              </tr>
                                         </tbody>
                                    </table>
