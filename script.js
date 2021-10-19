@@ -49,7 +49,10 @@ function closeFilterProduk() {
 window.addEventListener('scroll', function () {
      let btn_show_filter = document.querySelector('.btn-show-filter');
      let window_position = window.scrollY > 0;
-     btn_show_filter.classList.toggle('btn-show-filter-fixed', window_position);
+
+     if (this.window.innerWidth === 768) {
+          btn_show_filter.classList.toggle('btn-show-filter-fixed', window_position);
+     }
 });
 
 // EVENT CLICK CHANGE SRC IMAGE LARGE
@@ -68,3 +71,24 @@ container_produk_image.addEventListener("click", function (e) {
      }
 
 });
+
+
+// event count bertambah
+const btn_minus = document.querySelector("#btn-minus");
+const btn_plus = document.querySelector("#btn-plus");
+let countInput = document.querySelector("#value-count");
+
+btn_minus.addEventListener("click", function () {
+     return countInput;
+
+})
+btn_plus.addEventListener("click", function () {
+     countInput.innerHTML = count_input++;
+})
+
+// let i = "hello world";
+// let a = 10;
+// for (let index = 0; index < a.length; index++) {
+
+
+// }

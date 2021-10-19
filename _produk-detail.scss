@@ -1,9 +1,16 @@
 .produk-image {
 	width: 100%;
 	display: flex;
-	max-height: 550px;
+	max-height: 524px;
 	overflow: hidden;
 
+	.image-large {
+		width: 100%;
+		overflow: hidden;
+		img {
+			min-height: 523px;
+		}
+	}
 	img {
 		object-fit: cover;
 		background-size: cover;
@@ -14,7 +21,7 @@
 		}
 	}
 	.thumbnail {
-		width: 80%;
+		width: 100%;
 	}
 	.thumb {
 		width: 20%;
@@ -59,6 +66,114 @@
 		th,
 		td {
 			color: white;
+		}
+	}
+}
+
+.cart {
+	.total {
+		background-color: #243042;
+		align-self: flex-start;
+		border-radius: 5px;
+		box-sizing: border-box;
+		height: auto;
+		margin: 0px auto 50px auto;
+		padding: 20px;
+		position: sticky;
+		top: 90px;
+		width: 370px;
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+
+		.title {
+			font-size: 18px;
+
+			font-weight: 600;
+		}
+		.list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			p {
+				color: white;
+				font-size: 15px;
+				margin-bottom: 5px;
+			}
+		}
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+.product {
+	height: auto;
+	margin-bottom: 70px;
+	color: white;
+
+	.item {
+		box-sizing: border-box;
+		background-color: #243042;
+		height: auto;
+		margin-bottom: 10px;
+		position: relative;
+		width: 100%;
+		padding: 5px 0px;
+		border-radius: 10px;
+		overflow: hidden;
+
+		.item-main {
+			display: flex;
+			align-items: center;
+			.produk-content {
+				margin-left: 6px;
+			}
+
+			img {
+				border-radius: 5px;
+				float: left;
+				height: 95px;
+				margin-right: 10px;
+				object-fit: cover;
+				width: 95px;
+			}
+			a {
+				text-decoration: none;
+
+				h2 {
+					color: white;
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+			h3 {
+				color: orange;
+				font-size: 18px;
+				font-weight: 700;
+				margin-top: 0px;
+			}
+			.clearfix {
+				clear: both;
+				&::after {
+					display: block;
+					clear: both;
+					content: "";
+				}
+			}
+		}
+		svg {
+			bottom: 11px;
+			color: white;
+			position: absolute;
+			right: 10px;
+		}
+	}
+	.btn-outline-dark {
+		background-color: white;
+		color: #243042;
+		&:hover {
+			background-color: transparent !important;
+			color: white;
+			border: 1px solid white;
 		}
 	}
 }
