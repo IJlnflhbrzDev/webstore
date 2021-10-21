@@ -47,10 +47,14 @@ function closeFilterProduk() {
 
 
 window.addEventListener('scroll', function () {
+     let navbar = document.querySelector('nav.navbar');
      let btn_show_filter = document.querySelector('.btn-show-filter');
-     let window_position = window.scrollY > 0;
+     let window_position = window.scrollY;
+     if (window_position) {
 
-     if (this.window.innerWidth === 768) {
+     }
+
+     if (window.innerWidth == 768) {
           btn_show_filter.classList.toggle('btn-show-filter-fixed', window_position);
      }
 });
@@ -61,7 +65,7 @@ const imgLarge = document.querySelector(".thumbnail");
 
 container_produk_image.addEventListener("click", function (e) {
      // membuat kondisi ketika event click container img ini meng klik sebuah salah satu gambar small
-     if (e.target.className === "thumb-small") {
+     if (e.target.className == "thumb-small") {
           imgLarge.src = e.target.src;
           imgLarge.classList.add("fade");
 
