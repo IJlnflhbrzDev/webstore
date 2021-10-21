@@ -542,6 +542,13 @@ body.dark-mode .card {
     transition: all 0.55s ease;
     display: inline-block !important;
   }
+  .parent-image {
+    margin-bottom: 20px;
+  }
+  .content-produk-detail .form-select {
+    width: 100%;
+    margin: 30px 0px;
+  }
 }
 
 @media (max-width: 552px) {

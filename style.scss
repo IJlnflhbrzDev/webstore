@@ -267,6 +267,18 @@ body.dark-mode {
 		transition: all 0.55s ease;
 		display: inline-block !important;
 	}
+
+	// produk-detail
+	.parent-image {
+		margin-bottom: 20px;
+	}
+	// content-produk
+	.content-produk-detail {
+		.form-select {
+			width: 100%;
+			margin: 30px 0px;
+		}
+	}
 }
 @media (max-width: 552px) {
 	.navbar-brand {
