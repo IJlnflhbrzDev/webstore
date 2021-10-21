@@ -1,0 +1,31 @@
+.checkout {
+	table {
+		background-color: #243042;
+		border-radius: 5px;
+		color: white;
+		border-collapse: separate !important;
+		padding: 20px;
+
+		.title-table-produk {
+			font-weight: 500;
+		}
+	}
+
+	// FORM-PRODUK
+
+	.form-produk {
+		background-color: #243042;
+		padding: 20px;
+		border-radius: 5px;
+		h2 {
+			color: white;
+			font-size: 20px;
+		}
+		input,
+		select,
+		textarea {
+			background-color: #243042;
+			color: white;
+		}
+	}
+}

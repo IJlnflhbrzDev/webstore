@@ -106,7 +106,7 @@
   line-height: 38px;
 }
 
-.cart .total {
+.total {
   background-color: #243042;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -124,12 +124,12 @@
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.cart .total .title {
+.total .title {
   font-size: 18px;
   font-weight: 600;
 }
 
-.cart .total .list {
+.total .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,13 +142,13 @@
           justify-content: space-between;
 }
 
-.cart .total .list p {
+.total .list p {
   color: white;
   font-size: 15px;
   margin-bottom: 5px;
 }
 
-.cart .total .btn {
+.total .btn {
   width: 100%;
 }
 
@@ -237,6 +237,36 @@
   background-color: transparent !important;
   color: white;
   border: 1px solid white;
+}
+
+.checkout table {
+  background-color: #243042;
+  border-radius: 5px;
+  color: white;
+  border-collapse: separate !important;
+  padding: 20px;
+}
+
+.checkout table .title-table-produk {
+  font-weight: 500;
+}
+
+.checkout .form-produk {
+  background-color: #243042;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.checkout .form-produk h2 {
+  color: white;
+  font-size: 20px;
+}
+
+.checkout .form-produk input,
+.checkout .form-produk select,
+.checkout .form-produk textarea {
+  background-color: #243042;
+  color: white;
 }
 
 * {
