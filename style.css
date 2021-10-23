@@ -287,6 +287,10 @@ body.dark-mode .card {
   background-color: #243042;
 }
 
+.page-link {
+  background-color: #243042;
+}
+
 .navbar .menu {
   background-color: transparent;
   border: none !important;

@@ -34,6 +34,7 @@ function closeFilterProduk() {
      document.querySelector(".btn-show-filter").classList.remove("d-none")
 }
 
+// function ini merupakan fungsi ketika user klik salah satu link navigasi menu akan hilang
 // const navLinks = document.querySelectorAll('.nav-item');
 // const navButtonMenuHumberger = document.querySelector(".navbar-toggler ");
 // const menuToggle = document.getElementById('navbarSupportedContent')
