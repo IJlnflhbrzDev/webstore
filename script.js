@@ -78,48 +78,121 @@ container_produk_image.addEventListener("click", function (e) {
 });
 
 
+//Number Format
+const numberFormat = (value) => {
+     if (value.toString()[0] == "-") {
+          var negative = "-";
+     } else {
+          negative = "";
+     }
+     var raw = value.toString().replace(/(?!\.)\D/g, "").split(".");
+     var whole = raw[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     var decimal = false;
+     if (raw.length > 1) {
+          decimal = raw[1];
+     }
+     if (decimal !== false && (decimal !== "0" || decimal !== "00")) {
+          return negative + whole + "." + decimal;
+     } else {
+          return negative + whole;
+     }
+}
+
 // event count bertambah
+// let minusBtn = document.querySelector("#btn-minus"),
+//      plusBtn = document.querySelector("#btn-plus"),
+//      valueNumber = document.getElementById("value_count"),
+//      number = 1, /// number value
+//      min = 1, /// min number
+//      max = parseInt(document.getElementById("default-stock").value); /// max number
 
-let minusBtn = document.querySelector("#btn-minus"),
-     plusBtn = document.querySelector("#btn-plus"),
-     valueNumber = document.getElementById("value_count"),
-     number = 1, /// number value
-     min = 1, /// min number
-     max = 10; /// max number
-
-let hargaProduk = document.querySelector("#harga-produk"),
-     totalHargaProduk = document.getElementById("total-harga-produk"),
-     defaultHargaProduk = 149000,
-     hargaJual = 149000;
-
+// let hargaProduk = document.querySelector("#harga-produk"),
+//      totalHargaProduk = document.getElementById("total-harga-produk"),
+//      defaultHargaProduk = 149000,
+//      hargaJual = document.getElementById("input-harga").value;
 
 
-minusBtn.addEventListener("click", function () {
-     if (number > min) {
-          number = number - 1;
-          valueNumber.innerText = number;
-          valueNumber.style.color = "black";
-          // mengitung harga
-          defaultHargaProduk = defaultHargaProduk - hargaJual;
-          totalHargaProduk.innerText = "Rp." + defaultHargaProduk;
+
+// minusBtn.addEventListener("click", function () {
+//      if (number > min) {
+//           number = number - 1;
+//           valueNumber.innerText = number;
+//           valueNumber.style.color = "black";
+//           // mengitung harga
+//           defaultHargaProduk = defaultHargaProduk - hargaJual;
+//           totalHargaProduk.innerText = "Rp." + numberFormat(defaultHargaProduk);
+//      } else {
+//           valueNumber.style.color = "red ";
+//      }
+// });
+
+// plusBtn.addEventListener("click", function () {
+//      // console.log(max);
+//      if (number < max) {
+//           number = number + 1;
+//           valueNumber.innerText = number;
+//           valueNumber.style.color = "black";
+//           defaultHargaProduk = defaultHargaProduk + hargaJual;
+//           totalHargaProduk.innerText = "Rp." + numberFormat(defaultHargaProduk);
+
+//      } else {
+//           valueNumber.style.color = "red ";
+//           alert("Ups Stock Terbatas");
+
+
+//      }
+// });
+
+
+// SECTION DOM PRICE & STOK START
+
+let price = parseInt(document.getElementById("inputHargaHidden").value);
+let availableStok = parseInt(document.getElementById("inputStokHidden").value);
+
+const calculatePrice = (action) => {
+     let tagStok = document.getElementById("valueStok");
+     let tagPrice = document.getElementById("valueTotalPrice");
+     let nowStok = parseInt(tagStok.innerText);
+
+     if (action == "minus") {
+          nowStok--;
+
+          if (nowStok < 1) {
+               alert("Stok tidak boleh dibawah satu!");
+               tagStok.innerText = 1;
+               nowStok = 1;
+          } else {
+               tagStok.innerText = nowStok;
+          }
      } else {
-          valueNumber.style.color = "red ";
+          nowStok++;
+
+          if (nowStok > availableStok) {
+               alert("Stok melebihi jumlah yang tersedia");
+               nowStok = availableStok;
+          } else {
+               tagStok.innerText = nowStok;
+          }
      }
+
+     let totalPrice = price * nowStok;
+     // console.log(price);
+     tagPrice.innerText = `Rp. ${numberFormat(totalPrice)}`;
+}
+
+document.getElementById("btnPlusStok").addEventListener("click", function () {
+     calculatePrice("plus")
+});
+document.getElementById("btnMinusStok").addEventListener("click", function () {
+     calculatePrice("minus")
 });
 
-plusBtn.addEventListener("click", function () {
-     if (number < max) {
-          number = number + 1;
-          valueNumber.innerText = number;
-          valueNumber.style.color = "black";
-          defaultHargaProduk = defaultHargaProduk + hargaJual;
-          totalHargaProduk.innerText = "Rp." + defaultHargaProduk;
-
-     } else {
-          valueNumber.style.color = "red ";
-          alert("Ups Stock Terbatas");
+// SECTION DOM PRICE & STOK END
 
 
-     }
-});
-// end script event count button
+
+
+
+// Section Change Variant Start
+
+// Section Change Variant End

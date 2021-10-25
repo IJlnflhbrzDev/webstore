@@ -81,8 +81,43 @@
                                                   <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                        aria-label="Close"></button>
                                              </div>
-                                             <div class="modal-body">
-                                                  ...
+                                             <div class="modal-body cart">
+                                                  <div class="product mb-0">
+                                                       <div class="item">
+                                                            <div class="item-main">
+                                                                 <div class="produk-main">
+                                                                      <img src="https://v3.inidemo.site/assets/images/product/1586699592182.jpg"
+                                                                           alt="">
+
+                                                                 </div>
+                                                                 <div class="produk-content">
+
+                                                                      <a href="cart.html">
+                                                                           <h2 class="title mb-0">AMD Paket PC
+                                                                                Desktop Gaming Rakitan ||
+                                                                                Terbatas
+                                                                           </h2>
+                                                                      </a>
+                                                                      <small class="text-muted">Jumlah: 1</small>
+                                                                      <h3 class="price mt-0 mb-0">Rp 4.050.000</h3>
+                                                                      <small class="desc_product_"><a href="#"
+                                                                                class="text-white">Tambah
+                                                                                keterangan</a></small>
+                                                                      <div class="clearfix"></div>
+                                                                 </div>
+                                                            </div>
+                                                            <a href="cart.html">
+                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                      height="16" fill="currentColor"
+                                                                      class="bi bi-trash" viewBox="0 0 16 16">
+                                                                      <path
+                                                                           d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                                      <path fill-rule="evenodd"
+                                                                           d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                                 </svg>
+                                                            </a>
+                                                       </div>
+                                                  </div>
                                              </div>
                                              <div class="modal-footer">
                                                   <button type="button" class="btn btn-secondary"
@@ -142,12 +177,27 @@
                                    <h3>Judul Produk Detail</h3>
 
                                    <p class="price-detail">Rp 123.12345</p>
-                                   <select class="form-select mb-5 mt-5" aria-label="Default select example">
-                                        <option selected>Pilih Varian</option>
-                                        <option value="Merah">IJlal</option>
-                                        <option value="Kuning">Naufal</option>
-                                        <option value="Hijau">Hibrizi</option>
-                                   </select>
+                                   <div class="select-variant ">
+                                        <select class="form-select" aria-label="Variant Warna">
+                                             <option selected>Pilih Warna</option>
+                                             <option value="Merah">IJlal</option>
+                                             <option value="Kuning">Naufal</option>
+                                             <option value="Hijau">Hibrizi</option>
+                                        </select>
+                                        <select class="form-select" aria-label="Variant Ukuran">
+                                             <option selected>Pilih Ukuran</option>
+                                             <option value="Merah">IJlal</option>
+                                             <option value="Kuning">Naufal</option>
+                                             <option value="Hijau">Hibrizi</option>
+                                        </select>
+                                        <select class="form-select" aria-label="Variant Bahan  ">
+                                             <option selected>Pilih Bahan</option>
+                                             <option value="Merah">IJlal</option>
+                                             <option value="Kuning">Naufal</option>
+                                             <option value="Hijau">Hibrizi</option>
+                                        </select>
+                                   </div>
+
 
                                    <table class="table">
                                         <thead>
@@ -174,13 +224,13 @@
                                                   <td>
                                                        <div class="input-jumlah">
                                                             <button class="btn btn-primary " type="button"
-                                                                 id="btn-minus">
+                                                                 id="btnMinusStok">
                                                                  -
                                                             </button>
-                                                            <span id="value_count">1</span>
+                                                            <span id="valueStok">1</span>
                                                             <!-- <span id="value-count">1</span> -->
                                                             <button class="btn btn-primary " type="button"
-                                                                 id="btn-plus">
+                                                                 id="btnPlusStok">
                                                                  +
                                                             </button>
                                                        </div>
@@ -188,10 +238,12 @@
                                              </tr>
                                              <tr>
                                                   <th scope="row">Total</th>
-                                                  <td id="total-harga-produk">Rp 149.000</td>
+                                                  <td id="valueTotalPrice">Rp 149.000</td>
                                              </tr>
                                         </tbody>
                                    </table>
+                                   <input type="hidden" value="149000" id="inputHargaHidden">
+                                   <input type="hidden" value="10" id="inputStokHidden">
                                    <button type="button" class="btn btn-success">
                                         Beli Sekarang
                                    </button>

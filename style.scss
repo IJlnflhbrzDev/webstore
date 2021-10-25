@@ -1,4 +1,4 @@
-@import "./produk-detail", "./checkout";
+@import "./produk-detail", "./checkout", "./cart";
 * {
 	margin: 0;
 	padding: 0;
@@ -104,10 +104,11 @@ body.dark-mode {
 
 /* FORM FILTER */
 .filter-produk {
+	position: sticky;
+	top: 10px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	border-radius: 5px;
 	overflow: hidden;
-	position: relative;
 	width: 100%;
 	.top {
 		background-color: #243042;
@@ -197,11 +198,11 @@ body.dark-mode {
 		}
 	}
 
-	.row {
-		.col-lg-3 {
-			width: 20%;
-		}
-	}
+	// .row {
+	// 	.col-lg-3 {
+	// 		width: 20%;
+	// 	}
+	// }
 }
 
 // humberger
