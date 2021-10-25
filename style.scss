@@ -286,6 +286,13 @@ body.dark-mode {
 	}
 }
 @media (max-width: 552px) {
+	.content-produk-detail .select-variant {
+		flex-direction: column;
+		.form-select {
+			width: 100%;
+			margin: 5px 0px;
+		}
+	}
 	.navbar-brand {
 		margin-right: 0px !important;
 	}
