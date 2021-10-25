@@ -286,6 +286,12 @@ body.dark-mode {
 	}
 }
 @media (max-width: 552px) {
+	// produk detail checkout total harga => cart
+	.total {
+		width: 100%;
+		margin-top: 10px !important;
+	}
+	// form select
 	.content-produk-detail .select-variant {
 		flex-direction: column;
 		.form-select {

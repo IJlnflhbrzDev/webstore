@@ -598,6 +598,10 @@ body.dark-mode .card {
 }
 
 @media (max-width: 552px) {
+  .total {
+    width: 100%;
+    margin-top: 10px !important;
+  }
   .content-produk-detail .select-variant {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
